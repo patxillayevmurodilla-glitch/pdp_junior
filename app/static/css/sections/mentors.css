@@ -1,0 +1,231 @@
+/* =========================================
+   MENTORS (FULL)
+   ========================================= */
+
+/* faqat mentors sahifada header ostidan joy */
+.page-mentors .mentors {
+  padding-top: 56px; /* header sticky bo'lgani uchun */
+}
+
+/* Section */
+.mentors {
+  padding: 10px 0 90px;
+  background: #f8fafc;
+}
+
+/* Header part */
+.mentors-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px; /* subtitle bilan chiziqcha to'qnashmasin */
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.mentors-title {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 1000;
+  letter-spacing: -0.5px;
+  color: #0b2f33;
+  line-height: 1.05;
+}
+
+.mentors-title-accent {
+  color: #60a5fa;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* underline uchun joy */
+}
+
+/* underline fix: subtitle ustidan o'tib ketmasin */
+.mentors-title-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* -6 emas */
+  height: 4px;
+  border-radius: 999px;
+  background: #00c9d6;
+}
+
+.mentors-subtitle {
+  margin: 0;
+  max-width: 520px;
+  color: #2f4a50;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Nav buttons */
+.mentors-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mentors-nav-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  background: #ffffff;
+  color: #0b2f33;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+}
+
+.mentors-nav-btn span {
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 1000;
+}
+
+.mentors-nav-btn:hover {
+  transform: translateY(-2px);
+}
+
+.mentors-nav-btn:active {
+  transform: translateY(0);
+}
+
+/* active (next) button */
+.mentors-next {
+  background: #00c9d6;
+  border-color: transparent;
+  color: #052b2e;
+  box-shadow: 0 12px 30px rgba(0, 201, 214, 0.18);
+}
+
+.mentors-prev {
+  background: #ffffff;
+}
+
+/* disabled state (JS shu bilan ishlaydi) */
+.mentors-nav-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Slider wrapper */
+.mentors-track {
+  overflow: hidden;
+  width: 100%;
+  max-width: 996px;
+  margin: 0 auto;
+  padding: 6px 2px 4px;
+}
+
+/* Slider line */
+.mentors-inner {
+  display: flex;
+  gap: 18px;
+  will-change: transform;
+  transition: transform 0.35s ease;
+}
+
+/* Card */
+.mentor-card {
+  flex: 0 0 320px;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(2, 6, 23, 0.06);
+  box-shadow: 0 16px 44px rgba(2, 6, 23, 0.06);
+  padding: 14px;
+}
+
+.mentor-photo {
+  border-radius: 18px;
+  overflow: hidden;
+  height: 260px;
+  background: rgba(2, 6, 23, 0.06);
+}
+
+.mentor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mentor-info {
+  padding: 14px 6px 6px;
+  text-align: center;
+}
+
+.mentor-fullname {
+  font-weight: 1000;
+  color: #0b2f33;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+
+.mentor-role {
+  margin-top: 6px;
+  color: #6b7280;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE (Mentors only)
+   ========================================= */
+
+@media (max-width: 980px) {
+  .page-mentors .mentors {
+    padding-top: 46px;
+  }
+
+  .mentors-title {
+    font-size: 34px;
+  }
+
+  .mentor-photo {
+    height: 240px;
+  }
+
+  .mentors-track {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-mentors .mentors {
+    padding-top: 40px;
+  }
+
+  .mentors-title {
+    font-size: 28px;
+  }
+
+  .mentors-subtitle {
+    font-size: 14px;
+  }
+
+  .mentors-nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mentor-photo {
+    height: 220px;
+  }
+
+  .mentors-inner {
+    gap: 14px;
+  }
+
+  .mentor-card {
+    flex: 0 0 280px; /* mobilga mos */
+  }
+}

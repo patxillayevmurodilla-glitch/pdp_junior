@@ -1,0 +1,160 @@
+/* ===========================
+   TEAM / JAMOA PAGE
+   =========================== */
+
+.team-page {
+  background: #ffffff;
+}
+
+/* sticky header ostidan masofa */
+.page-team .team-page,
+.page-team .leadership {
+  padding-top: 56px;
+}
+
+.team-title {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 1000;
+  letter-spacing: -0.4px;
+  color: #0b2f33;
+}
+
+.team-title--small {
+  font-size: 36px;
+}
+
+.leadership {
+  padding: 18px 0 60px;
+  background: #ffffff;
+}
+
+.leadership-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.leader-card {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.06);
+  border-radius: 22px;
+  box-shadow: 0 16px 44px rgba(2, 6, 23, 0.06);
+  overflow: hidden;
+}
+
+.leader-photo {
+  padding: 14px 14px 0;
+}
+
+.leader-photo img {
+  width: 100%;
+  height: 270px; /* oldin 190px edi */
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.leader-meta {
+  padding: 12px 14px 16px;
+  text-align: center;
+}
+
+.leader-rank {
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(11, 47, 51, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.leader-name {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 1000;
+  color: #0b2f33;
+}
+
+.leader-note {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(11, 47, 51, 0.45);
+}
+
+/* Dream Team */
+.dream {
+  padding: 10px 0 90px;
+  background: #ffffff;
+}
+
+.dream-subtitle {
+  margin: 14px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #0b2f33;
+}
+
+.dream-photo {
+  margin: 22px auto 0;
+  width: min(980px, 100%);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  box-shadow: 0 18px 44px rgba(2, 6, 23, 0.12);
+  background: #ffffff;
+}
+
+.dream-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .team-title {
+    font-size: 32px;
+  }
+
+  .team-title--small {
+    font-size: 28px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leader-photo img {
+    height: 210px;
+  }
+
+  .dream-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .leadership {
+    padding-bottom: 40px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-photo img {
+    height: 240px;
+  }
+
+  .dream-subtitle {
+    font-size: 14px;
+  }
+}

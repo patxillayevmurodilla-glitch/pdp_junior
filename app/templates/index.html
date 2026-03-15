@@ -1,0 +1,632 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PDP Junior - Landing</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<header class="header">
+    <div class="container nav">
+        <a class="brand" href="#">
+            <img
+                    class="brand-logo"
+                    src="{% static 'images/pdp_logo.svg' %}"
+                    alt="PDP Junior"
+            />
+        </a>
+
+        <nav class="menu" aria-label="Main navigation">
+            <a href="{% url 'index' %}" >Asosiy sahifa</a>
+            <a href="{% url 'courses' %}">Kurslarimiz</a>
+            <a href="{% url 'mentors' %}">Mentorlarimiz</a>
+            <a href="{% url 'portfolio' %}" >Portfolio</a>
+            <a href="{% url 'team' %}">Jamoa</a>
+        </nav>
+
+        <a class="phone" href="tel:+998787777777">
+          <span class="phone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <path
+                      d="M6.6 10.8c1.3 2.6 3.4 4.7 6 6l2-2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.4 21.1 2.9 13.6 2.9 4.5c0-.6.5-1.1 1.1-1.1H7c.6 0 1.1.5 1.1 1.1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-1.8 1.4Z"
+              />
+            </svg>
+          </span>
+            <span>+998 78 777-74-77</span>
+        </a>
+    </div>
+</header>
+
+<main class="container hero">
+    <section class="hero-left">
+        <h1>
+            Farzandingiz <br/>
+            bugundan kelajak <br/>
+            yetakchisiga aylansin
+        </h1>
+        <p class="subtitle">
+            PDP Junior’da bolalarga IT orqali liderlik, jamoaviy ish, nutq
+            mahorati va muvaffaqiyat uchun zarur ko‘nikmalarni o‘rgatamiz.
+        </p>
+
+        <form class="form" action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            <label class="field">
+                <span class="label">Ism</span>
+                <input type="text" placeholder="Ism" name="name"/>
+            </label>
+            <label class="field">
+                <span class="label">Telefon</span>
+                <div class="phone-row">
+                    <span class="flag" aria-hidden="true"></span>
+                    <span class="code">+998</span>
+                    <input type="tel" placeholder="00-000-0000" name="phone_number"/>
+                </div>
+            </label>
+            <button class="btn" type="submit">Jo‘natish</button>
+        </form>
+    </section>
+
+    <section class="hero-right" aria-label="Illustration">
+        <div class="illus">
+            <div class="ring" aria-hidden="true"></div>
+            <img
+                    class="hero-image"
+                    src="{% static 'images/pdp_hero.webp' %}"
+                    alt="PDP Junior"
+            />
+
+            <div class="pill pill-top">
+            <span class="pill-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path
+                        d="M9 18 3 12l6-6 1.4 1.4L5.8 12l4.6 4.6L9 18Zm6 0-1.4-1.4L18.2 12l-4.6-4.6L15 6l6 6-6 6Z"
+                />
+              </svg>
+            </span>
+                <span class="pill-text">Dasturlash</span>
+            </div>
+
+            <div class="pill pill-mid">
+            <span class="pill-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path
+                        d="M7 10a3 3 0 1 1 0 6H6a4 4 0 0 1 0-8h1v2H6a2 2 0 0 0 0 4h1a1 1 0 0 0 0-2H6v-2h1Zm10-2a4 4 0 0 1 0 8h-1v-2h1a2 2 0 0 0 0-4h-1a1 1 0 0 0 0 2h1v2h-1a3 3 0 1 1 0-6h1ZM9 11h6v2H9v-2Z"
+                />
+              </svg>
+            </span>
+                <span class="pill-text">Robototexnika</span>
+            </div>
+
+            <div class="stat" aria-label="Stat">
+                <div class="stat-num">300+</div>
+                <div class="stat-text">O‘quvchilar</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="why">
+    <div class="container">
+        <h2 class="why-title">Nega aynan bizni tanlashadi?</h2>
+
+        <div class="why-grid">
+            <article class="why-card">
+                <div class="why-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                                d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3Zm-8 0c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v2h10v-2c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.1.8 1.9 1.8 1.9 2.9v2h6v-2c0-1.7-2.3-3-5-3Z"
+                        />
+                    </svg>
+                </div>
+                <h3 class="why-card-title">Tajribali ustozlar</h3>
+                <p class="why-card-text">
+                    Yuqori tajribali dasturchilar va injenerlar farzandingizning
+                    nafaqat texnik bilimlarini, balki jamoaviy ishlash va omma oldida
+                    nutq so‘zlash ko‘nikmalarini ham rivojlantirishda xizmat
+                    qiladilar.
+                </p>
+            </article>
+
+            <article class="why-card">
+                <div class="why-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                                d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 11h4v2h-6V7h2v6Z"
+                        />
+                    </svg>
+                </div>
+                <h3 class="why-card-title">Amaliy mashg‘ulot</h3>
+                <p class="why-card-text">
+                    O‘quv dasturimizdagi nazariy bilim va amaliy mashg‘ulotlar
+                    farzandingizning olgan bilimini real loyihalarda tadbiq qilishiga
+                    zamin yaratadi.
+                </p>
+            </article>
+
+            <article class="why-card">
+                <div class="why-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                                d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm5 11H7v-2h10v2Z"
+                        />
+                    </svg>
+                </div>
+                <h3 class="why-card-title">Yuqori natijalar</h3>
+                <p class="why-card-text">
+                    PDP Junior — 7 yillik ta’lim tajribasiga asoslanib, farzandingizga
+                    zamonaviy bilim, texnologiyalar va muvaffaqiyat uchun zarur
+                    ko‘nikmalarni taqdim etadi.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="video">
+    <div class="container">
+        <h2 class="video-title">PDP Junior – Smart Kelajak</h2>
+
+        <div class="video-frame" aria-label="Video">
+            <iframe
+                    src="https://www.youtube.com/watch?v=ERZg72dYH6A"
+                    title="PDP Junior Video"
+                    frameborder="1"
+                    allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+                    allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <div class="contact-card">
+            <div class="contact-left">
+                <h2 class="contact-title">
+                    Bog‘lanib, sizga to‘liq ma’lumot beramiz.
+                </h2>
+                <p class="contact-text">
+                    Hali ham savollaringiz bormi yoki kurs haqida qaror qabul qila
+                    olmayapsizmi? Unda sizga bog‘lanib batafsil ma'lumot beramiz.
+                </p>
+            </div>
+
+            <form class="form" action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <label class="field">
+                    <span class="label">Ism</span>
+                    <input type="text" placeholder="Ism" name="name"/>
+                </label>
+                <label class="field">
+                    <span class="label">Telefon</span>
+                    <div class="phone-row">
+                        <span class="flag" aria-hidden="true"></span>
+                        <span class="code">+998</span>
+                        <input type="tel" placeholder="00-000-0000" name="phone_number"/>
+                    </div>
+                </label>
+                <button class="btn" type="submit">Jo‘natish</button>
+            </form>       </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container">
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-big">7 yillik</div>
+                <div class="stat-small">IT mutaxassislar tayyorlashda tajriba</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-big">+3500</div>
+                <div class="stat-small">Kursimiz bitirgan o‘quvchilar</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-big">+2000</div>
+                <div class="stat-small">Amaliy junior loyihalar</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-big">+100</div>
+                <div class="stat-small">O‘quvchilarimiz yasagan robotlar</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews" aria-label="O‘quvchilarimiz haqida">
+    <div class="container">
+        <div class="reviews-top">
+            <h2 class="reviews-title">O‘quvchilarimiz haqida</h2>
+
+
+        </div>
+
+        <div class="reviews-track" aria-label="Reviews">
+            <article class="review" id="review-1">
+                <div class="review-card review-card--peach">
+                    Dasturchi faqatgina coding bilan shug‘ullanmaydi, u ham dasturchi,
+                    ham orator, ham jamiyat bilan yaxshi chiqishadigan yetuk shaxs
+                    bo‘lishini menga PDP Junior berdi. Shu bilan birga guruhimdagi ham
+                    jihatlik, inoqllikni hech bir so‘z bilan tariflab bo‘lmaydi. Men
+                    bunday muhitni avval ko‘rmaganman.
+                </div>
+
+                <div class="review-person">
+                    <div class="avatar" aria-hidden="true">A</div>
+                    <div>
+                        <div class="person-name">Abdulaziz Maxammadjonov</div>
+                        <div class="person-role">Frontend kursi bitiruvchisi</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review" id="review-2">
+                <div class="review-card review-card--lime">
+                    PDP Juniorning o‘zini tili bor, xodimlardan tortib
+                    o‘quvchilargacha ana shu tilda gaplashadi. Bu so‘zlar insonga
+                    kayfiyat va samimiylik beradi. So‘zlarni emotsiya bilan o‘qing:
+                    "Nice", "Siz bilan faxrlanaman", "Bittada topkanizqi qaren",
+                    "Dumbulim", "Ustozim nurim", "shogirtim nurim".
+                </div>
+
+                <div class="review-person">
+                    <div class="avatar" aria-hidden="true">T</div>
+                    <div>
+                        <div class="person-name">Turg‘unboy Qo‘chqorov</div>
+                        <div class="person-role">Frontend kursi bitiruvchisi</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review" id="review-3">
+                <div class="review-card review-card--cyan">
+                    Dasturlash deganda men ko‘z oldimga birinchi bo‘lib PDP Junior
+                    keladi chunki men codingni ilk bor PDP Juniorda tanidim. Kelajagim
+                    va orzularimni menga PDP Junior va ustozim nurim berdilar. Buning
+                    uchun ulardan juda minnatdorman.
+                </div>
+
+                <div class="review-person">
+                    <div class="avatar" aria-hidden="true">M</div>
+                    <div>
+                        <div class="person-name">Muhammadali Sagdiev</div>
+                        <div class="person-role">Frontend kursi bitiruvchisi</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="audience" aria-label="Bu kurs kimlar uchun">
+    <div class="container">
+        <h2 class="audience-title">Bu kurs kimlar uchun?</h2>
+
+        <div class="audience-card">
+            <article class="audience-item">
+                <div class="audience-num" aria-hidden="true">1</div>
+                <div class="audience-text">
+                    <h3>Dasturlashga qiziquvchilar uchun</h3>
+                    <p>
+                        Farzandingiz dasturlashga ilk qadamini aynan shu yerdan qo‘yadi.
+                    </p>
+                </div>
+                <div class="audience-media">
+                    <img src="{% static 'images/audience.webp' %}" alt="Dasturlash"/>
+                </div>
+            </article>
+
+            <article class="audience-item">
+                <div class="audience-num" aria-hidden="true">2</div>
+                <div class="audience-text">
+                    <h3>Robot va gadjetlarni sevuvchilar uchun</h3>
+                    <p>
+                        Bizda bolajonlar lego emas haqiqiy robotlarni 0 dan
+                        dasturlashadi.
+                    </p>
+                </div>
+                <div class="audience-media">
+                    <img src="{% static 'images/audience2.webp' %}" alt="Robototexnika"/>
+                </div>
+            </article>
+
+            <article class="audience-item">
+                <div class="audience-num" aria-hidden="true">3</div>
+                <div class="audience-text">
+                    <h3>Zamon kasb izlaganlar uchun</h3>
+                    <p>
+                        Qaysi kasb zamon talabida bo‘lishini bilamiz va farzandingizni
+                        kelajakka yetaklaymiz.
+                    </p>
+                </div>
+                <div class="audience-media">
+                    <img src="{% static 'images/audience3.webp' %}" alt="Kelajak kasblari"/>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Discount Section -->
+<section class="discount-section">
+    <div class="container">
+        <div class="discount-banner">
+            <h2 class="discount-title">
+                PDP Junior sertifikatiga ega barcha bitiruvchilarimiz PDP Academy
+                uchun 30% chegirmaga ega bo'ladilar.
+            </h2>
+            <div class="discount-percent">30%</div>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-left">
+                <div class="certificate-image">
+                    <img
+                            src="{% static 'images/serficate.webp' %}"
+                            alt="PDP Junior Certificate"
+                    />
+                </div>
+            </div>
+            <div class="certificate-right">
+                <h3 class="certificate-title">
+                    Professional tayyorlov Sertifikati
+                </h3>
+                <p class="certificate-description">
+                    O'quv kurslarimizni to'liq tamomlab sertifikatga ega bo'ling va
+                    PDP Academy kurslari uchun 30% chegiramani qo'lga kiriting!
+                </p>
+                <a href="#" class="certificate-btn">Sertifikatni ko'rish</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Questions Section -->
+
+<section class="smartcar">
+    <div class="container">
+        <div class="smartcar-card">
+            <div class="smartcar-left">
+                <div class="smartcar-kicker">Oʻzbekistondagi ilk</div>
+                <div class="smartcar-pill">SMART CAR</div>
+
+                <div class="smartcar-features" aria-label="Smart car features">
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/voice.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">Voice assistant</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/ultra.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">Ultra sonic</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/bluetooth.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">Bluetooth car</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/sensor.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">IR sensor (chiziq)</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/labirint.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">Labirint car</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img class="smartcar-ico" src="{% static 'images/3d.svg' %}" alt=""/>
+                        <div class="smartcar-feature-text">3D printda tayyorlangan</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/qayta.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">Qayta zaryadlanadi</div>
+                    </div>
+                    <div class="smartcar-feature">
+                        <img
+                                class="smartcar-ico"
+                                src="{% static 'images/mustaqil.svg' %}"
+                                alt=""
+                        />
+                        <div class="smartcar-feature-text">Mustaqil harakat qiladi</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="smartcar-right" aria-label="Smart car image">
+                <img
+                        class="smartcar-image"
+                        src="{% static 'images/smart car.webp' %}"
+                        alt="Smart car"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    ;(function () {
+        var track = document.querySelector('[data-mentors-track]')
+        var inner = document.querySelector('[data-mentors-inner]')
+        if (!track || !inner) return
+
+        var prev = document.querySelector('.mentors-prev')
+        var next = document.querySelector('.mentors-next')
+        var index = 0
+
+        function getGap() {
+            var style = window.getComputedStyle(inner)
+            return parseFloat(style.gap || style.columnGap || '0') || 0
+        }
+
+        function getStep() {
+            var card = inner.querySelector('.mentor-card')
+            if (!card) return 320
+            return card.getBoundingClientRect().width + getGap()
+        }
+
+        function maxIndex() {
+            var step = getStep()
+            if (!step) return 0
+            var maxTranslate = Math.max(0, inner.scrollWidth - track.clientWidth)
+            return Math.max(0, Math.round(maxTranslate / step))
+        }
+
+        function apply() {
+            var step = getStep()
+            var maxI = maxIndex()
+            if (index < 0) index = 0
+            if (index > maxI) index = maxI
+            inner.style.transform = 'translateX(' + -index * step + 'px)'
+
+            if (prev) prev.disabled = index === 0
+            if (next) next.disabled = index === maxI
+        }
+
+        if (prev)
+            prev.addEventListener('click', function () {
+                index -= 1
+                apply()
+            })
+        if (next)
+            next.addEventListener('click', function () {
+                index += 1
+                apply()
+            })
+
+        window.addEventListener('resize', function () {
+            apply()
+        })
+
+        apply()
+    })()
+</script>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a class="footer-logo" href="#" aria-label="PDP Junior">
+                    <img src="{% static 'images/pdp_logo2.svg' %}" alt="PDP Junior"/>
+                </a>
+
+                <div class="footer-contacts">
+                    <a class="footer-contact" href="tel:+998787777477">
+                        <span class="footer-ico" aria-hidden="true">☎</span>
+                        <span>+998 78 777–74–77</span>
+                    </a>
+                    <div class="footer-contact">
+                        <span class="footer-ico" aria-hidden="true">📍</span>
+                        <span>
+                  Toshkent shahri, Shayxontohur tum, Chorsu, Xadra, Zarqaynar
+                  3-uy
+                </span>
+                    </div>
+                    <div class="footer-contact">
+                        <span class="footer-ico" aria-hidden="true">📍</span>
+                        <span> Toshkent shahri, Sergeli tum, Yangi Sergeli 12-uy </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <div class="footer-col-title">Biz haqimizda</div>
+                    <a class="footer-link" href="#">Nega aynan biz?</a>
+                    <a class="footer-link" href="courses.html">Bizning kurslar</a>
+                    <a class="footer-link" href="#">Bizning mentorlar</a>
+                    <a class="footer-link" href="#">Bizning jamoa</a>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-col-title">Kompaniyalar</div>
+                    <a class="footer-link" href="#">PDP Academy</a>
+                    <a class="footer-link" href="#">PDP School</a>
+                    <a class="footer-link" href="#">PDP University</a>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-col-title">Boshqa loyihalar</div>
+                    <a class="footer-link" href="#">PDP Unicorn 2.0</a>
+                    <a class="footer-link" href="#">PDP Online</a>
+                    <a class="footer-link" href="#">PDP Kids</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">PDP Junior 2024</div>
+            <div class="footer-design">Design by RedFox</div>
+            <div class="footer-social" aria-label="Social links">
+                <a class="footer-social-btn" href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="6" y="6" width="12" height="12" rx="4"></rect>
+                        <path d="M16 8h.01"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </a>
+                <a class="footer-social-btn" href="#" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                                d="M21 12s0-3.2-.4-4.6c-.2-.8-.8-1.4-1.6-1.6C17.4 5.4 12 5.4 12 5.4s-5.4 0-7 .4c-.8.2-1.4.8-1.6 1.6C3 8.8 3 12 3 12s0 3.2.4 4.6c.2.8.8 1.4 1.6 1.6 1.6.4 7 .4 7 .4s5.4 0 7-.4c.8-.2 1.4-.8 1.6-1.6.4-1.4.4-4.6.4-4.6Z"
+                        ></path>
+                        <path d="M10 15V9l6 3-6 3Z"></path>
+                    </svg>
+                </a>
+                <a class="footer-social-btn" href="#" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22 2 11 13"></path>
+                        <path d="M22 2 15 22l-4-9-9-4 20-7Z"></path>
+                    </svg>
+                </a>
+                <a class="footer-social-btn" href="#" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.5 9.5V18"></path>
+                        <path d="M6.5 6.5h.01"></path>
+                        <path d="M10 9.5V18"></path>
+                        <path
+                                d="M10 13c0-2 1.2-3.5 3.2-3.5 1.9 0 2.8 1.2 2.8 3.3V18"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

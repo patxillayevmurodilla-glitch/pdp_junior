@@ -1,0 +1,253 @@
+.courses {
+    padding: 8px 0 90px;
+    background: #ffffff;
+}
+
+.courses-title {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: -0.4px;
+    font-weight: 1000;
+    color: #0b2f33;
+}
+
+.courses-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.course-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 18px;
+    background: #ffffff;
+    border: 1px solid rgba(2, 6, 23, 0.06);
+    border-radius: 22px;
+    padding: 16px;
+    box-shadow: 0 16px 44px rgba(2, 6, 23, 0.06);
+    overflow: hidden;
+}
+
+.course-media {
+    border-radius: 18px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    height: 160px;
+}
+
+.course-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 14px;
+}
+
+.course-media--yellow {
+    background: #ffe86a;
+}
+
+.course-media--orange {
+    background: #ffbf3f;
+}
+
+.course-media--cyan {
+    background: #6ee7ff;
+}
+
+.course-media--dark {
+    background: #111827;
+}
+
+.course-body {
+    padding: 6px 6px 6px 0;
+}
+
+.course-name {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 1000;
+    letter-spacing: -0.3px;
+    color: #0b2f33;
+}
+
+.course-desc {
+    margin: 6px 0 0;
+    color: #2f4a50;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.course-mentor {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mentor-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: rgba(2, 6, 23, 0.06);
+    display: grid;
+    place-items: center;
+    font-weight: 1000;
+    color: #0b2f33;
+}
+
+.mentor-label {
+    font-size: 12px;
+    color: #2f4a50;
+    opacity: 0.75;
+    font-weight: 800;
+}
+
+.mentor-name {
+    margin-top: 1px;
+    font-weight: 1000;
+    color: #ff9f1a;
+}
+
+/* ===========================
+   COURSES QUESTIONS FORM
+   =========================== */
+
+.course-questions {
+    padding: 60px 0 90px;
+    background: #f8fafc;
+}
+
+.course-questions-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 26px;
+    box-shadow: 0 16px 44px rgba(2, 6, 23, 0.08);
+    border: 1px solid rgba(2, 6, 23, 0.06);
+}
+
+.course-questions-title {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 1000;
+    color: #0b2f33;
+    letter-spacing: -0.4px;
+}
+
+.course-questions-text {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #2f4a50;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 520px;
+}
+
+/* Form */
+.course-questions-form {
+    display: grid;
+    gap: 14px;
+}
+
+.course-input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 201, 214, 0.35);
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    transition: 0.25s ease;
+    background: #ffffff;
+}
+
+.course-input:focus {
+    border-color: #00c9d6;
+    box-shadow: 0 0 0 4px rgba(0, 201, 214, 0.12);
+}
+
+.course-phone {
+    display: grid;
+    grid-template-columns: 34px auto 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 201, 214, 0.35);
+}
+
+.course-phone .phone-input {
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.course-submit-btn {
+    margin-top: 6px;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #00c9d6, #00a6ff);
+    color: #052b2e;
+    font-weight: 1000;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0, 201, 214, 0.28);
+    transition: 0.25s ease;
+}
+
+.course-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 201, 214, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .course-questions-card {
+        grid-template-columns: 1fr;
+        padding: 28px;
+    }
+
+    .course-questions-title {
+        font-size: 26px;
+    }
+}
+
+.course-questions {
+    padding: 60px 0 30px; /* 90 o‘rniga 30 */
+    background: #f8fafc;
+}
+
+.course-questions-card {
+    padding: 22px;
+}
+
+.course-questions-title {
+    font-size: 22px;
+}
+
+.course-input {
+    font-size: 13px;
+}
+
+
+/* Uzbekistan flag inside phone input */
+.uz-flag {
+    width: 26px;
+    height: 18px;
+    border-radius: 4px;
+    background: linear-gradient(
+            to bottom,
+            #1e40af 0% 33%,
+            #ffffff 33% 66%,
+            #16a34a 66% 100%
+    );
+    border: 1px solid rgba(2, 6, 23, 0.15);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}

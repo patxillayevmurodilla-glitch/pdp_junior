@@ -1,0 +1,32 @@
+.questions-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.questions-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.questions-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.questions-title {
+  margin: 0 0 15px 0;
+  font-size: 36px;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.questions-description {
+  margin: 0;
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.5;
+}

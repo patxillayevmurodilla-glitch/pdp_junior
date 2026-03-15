@@ -1,0 +1,118 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+}
+
+.page-courses .courses {
+  padding-top: 32px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 30% 30%, #07f1ff, #00b2c8);
+  box-shadow: 0 10px 26px rgba(0, 194, 209, 0.35);
+  position: relative;
+}
+
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.brand-text {
+  display: grid;
+  line-height: 1.05;
+}
+
+.brand-title {
+  font-size: 16px;
+}
+
+.brand-sub {
+  font-size: 14px;
+  color: #0ea5e9;
+  font-weight: 900;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: #3a4a4f;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menu a {
+  opacity: 0.9;
+}
+
+.menu a:hover {
+  opacity: 1;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0, 201, 214, 0.18);
+  color: #073a40;
+  font-weight: 900;
+  border: 1px solid rgba(0, 201, 214, 0.2);
+  white-space: nowrap;
+}
+
+.phone-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  display: grid;
+  place-items: center;
+}
+
+.phone-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.phone-icon path {
+  fill: #0b2f33;
+}
+
+.burger {
+  display: none;
+}

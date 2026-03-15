@@ -1,0 +1,32 @@
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+
+
+@import url("./layout/container.css");
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+
+@import url("./component/buttons.css");
+@import url("./component/forms.css");
+@import url("./component/misc.css");
+
+
+@import url("./sections/hero.css");
+@import url("./sections/why.css");
+@import url("./sections/video.css");
+@import url("./sections/contact.css");
+@import url("./sections/stats.css");
+@import url("./sections/reviews.css");
+@import url("./sections/audience.css");
+@import url("./sections/courses.css");
+@import url("./sections/discount.css");
+@import url("./sections/questions.css");
+@import url("./sections/smartcar.css");
+@import url("./sections/works.css");
+@import url("./sections/mentors.css");
+@import url("./sections/results.css");
+@import url("./sections/team.css");
+
+
+@import url("./responsive/breakpoints.css");
